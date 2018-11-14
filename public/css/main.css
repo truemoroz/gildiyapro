@@ -1,0 +1,28 @@
+.tasks {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tasks__table {
+    width: auto;
+}
+
+.tasks__delete {
+    cursor: pointer;
+}
+
+.rdiv, .ldiv {
+    display: none;
+}
+
+.mdiv {
+    width: 100% !important;
+}
+
+#addform {
+    width: 500px;
+}
