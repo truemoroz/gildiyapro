@@ -57,8 +57,7 @@ class TasksController extends Controller
         $task->save();
 
 //      возвращаем на страницу заданий
-        $tasks = DB::select('select * from task_view');
-        return view('tasks', compact('tasks'));
+        return redirect('/');
 
     }
 }
