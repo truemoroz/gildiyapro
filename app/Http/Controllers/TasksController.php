@@ -10,30 +10,27 @@ use Illuminate\Support\Facades\DB;
 
 class TasksController extends Controller
 {
-    //контроллес страницы заданий
+    //контроллер страницы заданий
     public function index()
     {
-
-//        $authors = Author::all();
         $tasks = DB::select('select * from task_view');
-
         return view('tasks', compact('tasks'));
     }
 
+//   метод удаления задачи
     public function delete($id)
     {
-
         Task::where('id', '=', $id)->delete();
     }
 
+//    контроллер формы добавления
     public function addForm()
     {
-
         $statuses = Status::all();
-
         return view('tasks_add', compact('statuses'));
     }
 
+//    метод добавления задачи
     public function add(Request $request)
     {
         $name = $request->name;

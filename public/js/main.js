@@ -5,7 +5,6 @@ $(document).ready(function () {
   var filtersConfig = {
     base_path: '/js/tablefilter/',
     paging: {
-      // results_per_page: ['Records: ', [3]],
       length: 4,
     },
     col_2: 'select',
@@ -13,6 +12,8 @@ $(document).ready(function () {
   };
   var tf = new TableFilter('tasks', filtersConfig);
   tf.init();
+
+  $('.tasks').addClass('active');
 
 
   // удаление задачи
@@ -23,7 +24,7 @@ $(document).ready(function () {
       const id = self.data('id');
       $.ajax({
         type: "GET",
-        url: "/tasks/delete/" + id,
+        action: "/delete/" + id,
         success: function () {
           console.log('ok');
           self.parent().parent().remove();

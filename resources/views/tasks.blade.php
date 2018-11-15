@@ -12,7 +12,7 @@
 <body>
 
 <div class="tasks">
-    <a href="./tasks/add" type="button" class="btn btn-primary tasks__button">Добавить задачу</a>
+    <a href="/add" type="button" class="btn btn-primary tasks__button">Добавить задачу</a>
     <table id="tasks" class="tasks__table table table-striped table-bordered">
         <tr>
             <th></th>
@@ -22,7 +22,7 @@
         </tr>
         @foreach($tasks as $task)
             <tr>
-                <td><span class="js-delete tasks__delete" data-id="{{ $task->id }}">X</span>  {{ $task->id }}</td>
+                <td><span class="js-delete tasks__delete" data-id="{{ $task->id }}">X</span></td>
                 <td>{{ $task->subject }}</td>
                 <td>{{ $task->name }}</td>
                 <td>{{ $task->status }}</td>

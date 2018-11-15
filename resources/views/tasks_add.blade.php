@@ -11,9 +11,9 @@
 </head>
 <body>
 
-<div class="tasks">
+<div class="addtasks">
     <h1>Добавление новой задачи</h1>
-    <form id="addform" method="post" action="/tasks/add">
+    <form id="addform" method="post" action="/add">
         @csrf
         <div class="form-group">
             <div class="input-group mb-3">
