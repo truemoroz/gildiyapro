@@ -24,7 +24,7 @@ $(document).ready(function () {
       const id = self.data('id');
       $.ajax({
         type: "GET",
-        action: "/delete/" + id,
+        url: "/delete/" + id,
         success: function () {
           console.log('ok');
           self.parent().parent().remove();

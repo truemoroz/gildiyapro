@@ -22,7 +22,7 @@
         </tr>
         @foreach($tasks as $task)
             <tr>
-                <td><span class="js-delete tasks__delete" data-id="{{ $task->id }}">X</span></td>
+                <td><span class="js-delete tasks__delete" data-id="{{ $task->id }}">X</span>{{ $task->id }}</td>
                 <td>{{ $task->subject }}</td>
                 <td>{{ $task->name }}</td>
                 <td>{{ $task->status }}</td>
